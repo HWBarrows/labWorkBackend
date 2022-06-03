@@ -1,0 +1,40 @@
+@baseUrl = http://localhost:7700
+
+GET {{baseUrl}}/procedures
+
+###
+
+POST {{baseUrl}}/procedures
+Content-Type: application/json
+
+{
+    "heading": "Routine Pipette Check and Calibration Again",
+    "author" : "Philip Fry",
+    "purpose": "To perform a calibration check on a pipette with automated data capture and compliance documentation. The purpose of this test is to check if the pipette is dispensing the same amount of liquid each time.",
+    "scope": "This procedure is to be used for demonstrations of automatic calibration and documentation.",
+    "steps": [
+        {"do": "Prepare balance", "how": ["Place a beaker with 1000ul of distilled H20 on the balance and tare"]},
+        {"do": "Weigh the pipettes at 100% volume ﬁve times", "how": ["Aspirate and dispense 100% of the volume into the beaker", "Record the weight in the table in step 6.4"]}
+        ]   
+}
+
+###
+
+PUT {{baseUrl}}/procedures
+Content-Type: application/json
+
+{
+    "heading": "Routine Pipette Check and Calibration Again",
+    "author" : "Philip Fry",
+    "purpose": "To see if this logic works",
+    "steps": [
+        {"do": "Prepare balance"}
+        ]   
+}
+
+###
+
+DELETE {{baseUrl}}/procedures/6299d1eea6a54789f2678f7e
+
+###
+PATCH {{baseUrl}}/procedures

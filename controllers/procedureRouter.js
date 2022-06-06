@@ -17,6 +17,15 @@ procedureRouter
     
 })
 
+.get("/:id", async (req, res, next)=> {
+    try {
+    const singleDoc = await Procedure.findById(req.params.id)
+    res.send(singleDoc)
+    }catch (err){
+        next(createError(400, err.message))
+    }
+})
+
 .post("/", async (req, res, next) => {
     try {
         const procedure = await Procedure.create(req.body)
@@ -28,6 +37,8 @@ procedureRouter
 
 .put("/", async (req, res, next)=> {
     try {
+
+    //change to _id     
     const filter = req.body.heading
     const update = req.body
 

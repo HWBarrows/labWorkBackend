@@ -16,7 +16,7 @@ const procedureSchema = new Schema({
     author:       { type: String, required, trim},
     purpose:      { type: String, trim},
     scope:        { type: String, trim},
-    steps:        [{type: doSchema, required}],
+    steps:        { type: Array, required} ,
     materials:    [{type: String, trim}],
     definitions:  [{type: String, trim}]
 })

@@ -34,7 +34,7 @@ Content-Type: application/json
 
 ###
 
-DELETE {{baseUrl}}/procedures/6299d1eea6a54789f2678f7e
+DELETE {{baseUrl}}/procedures/629cef4e086d25445cd4ac98
 
 ###
 PATCH {{baseUrl}}/procedures
